@@ -11,52 +11,52 @@ import com.example.interview.viewmodel.MyViewModelFactory
 import com.example.interview.viewmodel.UserViewModel
 import java.lang.reflect.Array
 
-//class MainActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//
-//        var repository = UserRepository(RetrofitHelper.service)
-//        var viewModel = ViewModelProvider(this, MyViewModelFactory(repository)).get(UserViewModel::class.java)
-//
-//        viewModel.userss.observe(this, Observer {
-//            it.forEach {
-//
-//                Log.e("detailsusers", "onCreate: ${it.name}>>${it.email}", )
-//
-//            }
-//        })
-//    }
-//}
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-fun main() {
-    var arr = intArrayOf(22,54,7,14,7,787,14,5,78)
-//    rmduplicate(arr)
-//    sortArray(arr)
-//     findDuplicates(arr)
-//    swapNumber(5,11)
-//    addUsingRecursion(arr,arr.size,0)
-//    isVowel("z")
-//    println(getFactorial(6))
+        var repository = UserRepository(RetrofitHelper.service)
+        var viewModel = ViewModelProvider(this, MyViewModelFactory(repository)).get(UserViewModel::class.java)
 
+        viewModel.userss.observe(this, Observer {
+            it.forEach {
 
-//    palendrome("clamkdkmac")
-//    table(5)
-//    fabonaci(2,3)
-//    atoz('Z')
+                Log.e("detailsusers", "onCreate: ${it.name}>>${it.email}", )
 
-//    reversesentence("sattaShergill")
-//    largestNumber(arr)
-//    charfreq('s',"sattaShergill" )
-//    myTrangle(5)
-//    isPrime(49)
-
-//daigonalMatrix(9)
-
-//    addTwoMatrix(2,3)
-
-   multiplyArrays(arrayOf(intArrayOf(1,2,3),intArrayOf(5,9,3)),arrayOf(intArrayOf(3,4,2),intArrayOf(4,0,2),intArrayOf(4,0,2)))
+            }
+        })
+    }
 }
+
+//fun main() {
+//    var arr = intArrayOf(22,54,7,14,7,787,14,5,78)
+////    rmduplicate(arr)
+////    sortArray(arr)
+////     findDuplicates(arr)
+////    swapNumber(5,11)
+////    addUsingRecursion(arr,arr.size,0)
+////    isVowel("z")
+////    println(getFactorial(6))
+//
+//
+////    palendrome("clamkdkmac")
+////    table(5)
+////    fabonaci(2,3)
+////    atoz('Z')
+//
+////    reversesentence("sattaShergill")
+////    largestNumber(arr)
+////    charfreq('s',"sattaShergill" )
+////    myTrangle(5)
+////    isPrime(49)
+//
+////daigonalMatrix(9)
+//
+////    addTwoMatrix(2,3)
+//
+//   multiplyArrays(arrayOf(intArrayOf(1,2,3),intArrayOf(5,9,3)),arrayOf(intArrayOf(3,4,2),intArrayOf(4,0,2),intArrayOf(4,0,2)))
+//}
 
 fun addTwoMatrix(r:Int,c:Int){
     val first = arrayOf(intArrayOf(1,2,3),intArrayOf(5,9,4))

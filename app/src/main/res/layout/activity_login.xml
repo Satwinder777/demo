@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".login.LoginActivity"
+    android:background="#00BCB9B9"
+    android:orientation="vertical">
+
+  <TextView
+      android:id="@+id/pageTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+
+      android:text="Signup Page"
+      android:textAlignment="center"
+      android:textColor="@color/black"
+      android:textSize="24sp"
+
+      />
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/materialCardView"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_gravity="center"
+      android:layout_marginVertical="20dp"
+      app:cardCornerRadius="50dp">
+
+    <ImageView
+        android:id="@+id/profileImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:src="@drawable/baseline_account_circle_24" />
+  </com.google.android.material.card.MaterialCardView>
+
+
+
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:textColorHint="@color/com_facebook_blue"
+      app:errorEnabled="true">
+
+    <EditText
+        android:id="@+id/firstnameid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:inputType="textCapWords"
+        android:selectAllOnFocus="true"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"
+        android:contentDescription="Enter How Much Cookies You Want"/>
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:textColorHint="@color/com_facebook_blue"
+
+      app:errorEnabled="true">
+
+    <EditText
+        android:id="@+id/lastnameid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fname"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:inputType="textCapWords"
+        android:selectAllOnFocus="true"
+        android:importantForAutofill="no"
+        android:imeOptions="actionNext"/>
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:textColorHint="@color/com_facebook_blue"
+      app:errorEnabled="true">
+
+    <EditText
+        android:id="@+id/emailSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:inputType="textCapWords"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no" />
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:textColorHint="@color/com_facebook_blue"
+      app:errorEnabled="true"
+      app:passwordToggleEnabled="true"
+      app:passwordToggleDrawable="@drawable/show_password">
+
+    <EditText
+        android:id="@+id/passwordId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:imeOptions="actionNext"
+        android:selectAllOnFocus="true"
+        android:importantForAutofill="no" />
+  </com.google.android.material.textfield.TextInputLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:textColorHint="@color/com_facebook_blue"
+      app:errorEnabled="true"
+      app:passwordToggleEnabled="true"
+      app:passwordToggleDrawable="@drawable/show_password">
+
+    <EditText
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/cpassword"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="no" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/SignUp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:imeOptions="actionGo"
+      android:text="SignUp"
+      app:cornerRadius="10dp"
+      android:insetTop="0dp"
+      android:insetBottom="0dp"
+      app:strokeColor="@color/black"
+      />
+</LinearLayout>
