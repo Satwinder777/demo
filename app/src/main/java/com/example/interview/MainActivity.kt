@@ -1,22 +1,25 @@
 package com.example.interview
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.interview.new1.Problem
+
 import com.example.interview.repository.UserRepository
 import com.example.interview.retrofitHelper.RetrofitHelper
 import com.example.interview.viewmodel.MyViewModelFactory
 import com.example.interview.viewmodel.UserViewModel
-import java.lang.reflect.Array
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),Problem {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var repository = UserRepository(RetrofitHelper.service)
+        var repository = UserRepository(RetrofitHelper.service,RetrofitHelper.service1)
         var viewModel = ViewModelProvider(this, MyViewModelFactory(repository)).get(UserViewModel::class.java)
 
         viewModel.userss.observe(this, Observer {
@@ -26,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+    }
+
+    override fun clicked(item: Int,context:Context) {
+        Toast.makeText(context, "item>>$item", Toast.LENGTH_SHORT).show()
+        Log.e("errorsolve", "clicked: $$item", )
     }
 }
 

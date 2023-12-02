@@ -92,7 +92,7 @@
       app:errorEnabled="true">
 
     <EditText
-        android:id="@+id/emailSignup"
+        android:id="@+id/emailet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
