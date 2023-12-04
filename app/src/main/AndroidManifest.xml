@@ -12,7 +12,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Interview"
+        android:theme="@style/Theme.PieSocketAndroidSDK"
+
         tools:targetApi="31">
         <activity
             android:name=".new1.websocket.ProductBillingActivity"

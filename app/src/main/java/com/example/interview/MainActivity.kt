@@ -63,7 +63,8 @@ class MainActivity : AppCompatActivity(),Problem {
 //
 ////    addTwoMatrix(2,3)
 //
-//   multiplyArrays(arrayOf(intArrayOf(1,2,3),intArrayOf(5,9,3)),arrayOf(intArrayOf(3,4,2),intArrayOf(4,0,2),intArrayOf(4,0,2)))
+////   multiplyArrays(arrayOf(intArrayOf(1,2,3),intArrayOf(5,9,3)),arrayOf(intArrayOf(3,4,2),intArrayOf(4,0,2),intArrayOf(4,0,2)))
+//    bubleSort(arr)
 //}
 
 fun addTwoMatrix(r:Int,c:Int){
@@ -336,41 +337,6 @@ fun swapNumber(a:Int,b:Int){
     println("$a >>$b")
 
 }
-fun sortArray(arr: IntArray) {
-    var size = arr.size
-    var temp :Int
-    var duplicate = mutableListOf<Int>()
-    for (i in 0..size-1){
-
-        for (j in 0..size-1){
-            if (arr[i]>arr[j]){
-                temp = arr[j]
-                arr[j] = arr[i]
-                arr[i] = temp
-            }
-            if (arr[i]>arr[j]){
-
-            }
-//            if (duplicate.contains(arr[j]).not()){
-//                duplicate.add(arr[j])
-//            }
-//            var dupliPresnt = false
-//            duplicate.forEach {
-//                if (it==arr[j]){
-//                    dupliPresnt = true
-//                }
-//            }
-//            if (dupliPresnt==false){
-//                duplicate.add(arr[j])
-//            }
-
-        }
-    }
-
-    print(arr.joinToString())
-    println()
-    println(duplicate.joinToString())
-}
 
 fun power(base: Int, exp: Int): Int {
     var mexp = exp
@@ -466,4 +432,65 @@ fun findDuplicates(arr: IntArray){
 //
 //}
 
+
+fun bubleSort(arr: IntArray){
+    print(arr.contentToString())
+
+    println()
+    print(arr.contentToString())
+
+    for (i in 0 until arr.size-1){
+        var temp=0
+        for (j in 0 until arr.size-1-i){
+            if(arr[j]>arr[j+1]){
+                var temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+//              temp = arr[j]
+//                arr[j] = arr[i]
+//                arr[i] = temp
+            }
+        }
+    }
+    println()
+    println(arr.contentToString())
+
+}
+fun sortArray(arr: IntArray) {
+    var size = arr.size
+    var temp :Int
+    var duplicate = mutableListOf<Int>()
+    print(arr.contentToString())
+    println()
+    for (i in 0..size-1){
+
+        for (j in 0..size-1){
+            if (arr[i]<arr[j]){
+                temp = arr[j]
+                arr[j] = arr[i]
+                arr[i] = temp
+            }
+//            if (arr[i]>arr[j]){
+//
+//            }
+//            if (duplicate.contains(arr[j]).not()){
+//                duplicate.add(arr[j])
+//            }
+//            var dupliPresnt = false
+//            duplicate.forEach {
+//                if (it==arr[j]){
+//                    dupliPresnt = true
+//                }
+//            }
+//            if (dupliPresnt==false){
+//                duplicate.add(arr[j])
+//            }
+
+        }
+    }
+
+    print(arr.joinToString())
+//    println()
+//    println(duplicate.joinToString())
+}
 

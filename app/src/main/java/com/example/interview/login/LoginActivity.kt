@@ -9,6 +9,7 @@ import com.example.interview.databinding.ActivityLoginBinding
 import com.example.interview.model.LoginDetails
 import com.example.interview.model.rejisterDetails
 import com.example.interview.new1.websocket.ProductBillingActivity
+import com.example.interview.new1.websocket.SocketActivity
 
 import com.example.interview.repository.UserRepository
 import com.example.interview.retrofitHelper.RetrofitHelper
@@ -48,7 +49,8 @@ class LoginActivity : AppCompatActivity() {
 
             i+=1
             MainActivity().clicked(i,this)
-            var intent = Intent(this,ProductBillingActivity::class.java)
+//            var intent = Intent(this,ProductBillingActivity::class.java)
+            var intent = Intent(this,SocketActivity::class.java)
             startActivity(intent)
         }
     }
