@@ -7,4 +7,6 @@
     <string name="fname">Firstname</string>
     <string name="email">Email</string>
     <string name="cpassword">Confirm Password</string>
+    <string name="appid">768947471</string>
+    <string name="appsign">6bd89388580bae031b67ad0b6f1bb3584f4b73d30a0c5584490b0a7ba72630f3</string>
 </resources>
